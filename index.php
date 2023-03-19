@@ -4,6 +4,7 @@ class car{
   public $version;
   public $color;
   public $speed;
+
   public function features(){
       echo 'car color is '. $this->color;
       echo '<br>';
@@ -12,8 +13,9 @@ class car{
       echo 'car speed is '. $this->speed;
       echo '<br>';
   }
+  const OWNAME = 4;
   public function owner($name){
-      if (strlen($this->$name)<3){
+      if (strlen($this->$name)<self::OWNAME){
           echo 'invalid name, please enter your real name  <br>';
       }else{
           echo 'welcome '.$name;
